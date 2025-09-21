@@ -162,7 +162,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "create",
+					"query": "create table",
 					"metadata": {
 						"language": "sql"
 					},
@@ -238,7 +238,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "fac5b46c-0763-481f-b86f-36f8ad3ec123"
+						"spark.autotune.trackingId": "5c2fb0be-e98b-4444-aadd-37d712ad042c"
 					}
 				},
 				"metadata": {
