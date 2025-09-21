@@ -1,26 +1,27 @@
 name: workspace deployment
 
 on:
-    push:
-        branches: [ workspace_publish ]
+  push:
+    branches: [ workspace_publish ]
+
 jobs:
-    release:
-        # You also can use the self-hosted runners.
-        runs-on: windows-latest
-        steps:
-        # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
-          - uses: actions/checkout@v2
-          - name: azure synapse deployement
-          - uses: azure/synapse-workspace-deployment@release-1.0
-            with:
-              TargetWorkspaceName: 'poductionenv'
-              TemplateFile: './testingenvfabic/TemplateForWorkspace.json'
-              ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
-              environment: 'Azure Public'
-              resourceGroup: 'RGproduction'
-              clientId: ${{secrets.clientId}}
-              clientSecret:  ${{secrets.clientSecret}}
-              subscriptionId: ${{secrets.subscriptionId}}
-              tenantId: ${{secrets.tenantId}}
-              DeleteArtifactsNotInTemplate: 'true'
-              managedIdentity: 'False'
+  release:
+    runs-on: windows-latest
+    steps:
+      # Checks out your repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+
+      - name: Azure Synapse deployment
+        uses: azure/synapse-workspace-deployment@release-1.0
+        with:
+          TargetWorkspaceName: 'poductionenv'
+          TemplateFile: './testingenvfabic/TemplateForWorkspace.json'
+          ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
+          environment: 'Azure Public'
+          resourceGroup: 'RGproduction'
+          clientId: ${{ secrets.clientId }}
+          clientSecret: ${{ secrets.clientSecret }}
+          subscriptionId: ${{ secrets.subscriptionId }}
+          tenantId: ${{ secrets.tenantId }}
+          DeleteArtifactsNotInTemplate: 'true'
+          managedIdentity: 'False'
