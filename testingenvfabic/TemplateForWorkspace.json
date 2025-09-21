@@ -162,7 +162,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "create table",
+					"query": "create table 2",
 					"metadata": {
 						"language": "sql"
 					},
@@ -238,16 +238,12 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5c2fb0be-e98b-4444-aadd-37d712ad042c"
+						"spark.autotune.trackingId": "4c8b6d41-c843-491b-86db-e0a1068dda30"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
 					"enableDebugMode": false,
-					"kernelspec": {
-						"name": "synapse_pyspark",
-						"display_name": "python"
-					},
 					"language_info": {
 						"name": "python"
 					},
@@ -258,20 +254,20 @@
 						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
 						"auth": {
 							"type": "AAD",
-							"authResource": "https://dev.azuresynapse.net"
+							"authResource": "https://dev.azuresynapse.net",
+							"authHeader": null
 						},
 						"sparkVersion": "3.4",
 						"nodeCount": 10,
 						"cores": 4,
 						"memory": 28,
-						"automaticScaleJobs": false
+						"extraHeader": null
 					},
 					"sessionKeepAliveTimeout": 30
 				},
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
 						"source": [
 							"from pyspark.sql import SparkSession\n",
 							"\n",
@@ -285,8 +281,7 @@
 							"df.show(5)\n",
 							""
 						],
-						"outputs": [],
-						"execution_count": null
+						"outputs": []
 					}
 				]
 			},
