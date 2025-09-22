@@ -2,7 +2,7 @@
 	"name": "SQL script 2",
 	"properties": {
 		"content": {
-			"query": "create table 2",
+			"query": "create table 23",
 			"metadata": {
 				"language": "sql"
 			},
