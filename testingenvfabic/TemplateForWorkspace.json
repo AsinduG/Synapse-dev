@@ -162,7 +162,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "create table 2",
+					"query": "create table 23",
 					"metadata": {
 						"language": "sql"
 					},
