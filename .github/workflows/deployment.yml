@@ -9,9 +9,10 @@ jobs:
     runs-on: windows-latest
     steps:
       # Checks out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Azure Synapse deployment
+      - name: Azure Synapse Deployment
         uses: azure/synapse-workspace-deployment@release-1.0
         with:
           TargetWorkspaceName: 'poductionenv'
