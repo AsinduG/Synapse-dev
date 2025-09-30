@@ -12,9 +12,21 @@
 			"metadata": "Secure string for 'connectionString' of 'testingenvfabic-WorkspaceDefaultSqlServer'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
-		"testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url": {
+		"mynotebook_properties_bigDataPool_referenceName": {
 			"type": "string",
-			"defaultValue": "https://adlstestingasindu.dfs.core.windows.net"
+			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 1_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 3_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 4_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
 		}
 	},
 	"variables": {
@@ -77,7 +89,10 @@
 				"annotations": [],
 				"type": "AzureSqlDW",
 				"typeProperties": {
-					"connectionString": "[parameters('testingenvfabic-WorkspaceDefaultSqlServer_connectionString')]"
+					"connectionString": {
+						"type": "SecureString",
+						"value": "[parameters('testingenvfabic-WorkspaceDefaultSqlServer_connectionString')]"
+					}
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -96,7 +111,7 @@
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "[parameters('testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url')]"
+					"url": "https://adlstestingasindu.dfs.core.windows.net"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -237,95 +252,14 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/Notebook 1')]",
+			"name": "[concat(parameters('workspaceName'), '/mynotebook')]",
 			"type": "Microsoft.Synapse/workspaces/notebooks",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "sparkpoolmedium",
-					"type": "BigDataPoolReference"
-				},
-				"sessionProperties": {
-					"driverMemory": "56g",
-					"driverCores": 8,
-					"executorMemory": "56g",
-					"executorCores": 8,
-					"numExecutors": 2,
-					"runAsWorkspaceSystemIdentity": false,
-					"conf": {
-						"spark.dynamicAllocation.enabled": "false",
-						"spark.dynamicAllocation.minExecutors": "2",
-						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "4c8b6d41-c843-491b-86db-e0a1068dda30"
-					}
-				},
-				"metadata": {
-					"saveOutput": true,
-					"enableDebugMode": false,
-					"language_info": {
-						"name": "python"
-					},
-					"a365ComputeOptions": {
-						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
-						"name": "sparkpoolmedium",
-						"type": "Spark",
-						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
-						"auth": {
-							"type": "AAD",
-							"authResource": "https://dev.azuresynapse.net",
-							"authHeader": null
-						},
-						"sparkVersion": "3.4",
-						"nodeCount": 10,
-						"cores": 4,
-						"memory": 28,
-						"extraHeader": null
-					},
-					"sessionKeepAliveTimeout": 30
-				},
-				"cells": [
-					{
-						"cell_type": "code",
-						"source": [
-							"from pyspark.sql import SparkSession\n",
-							"\n",
-							"# Create Spark session with smaller resources\n",
-							"spark = SparkSession.builder.getOrCreate()\n",
-							"\n",
-							"# Read CSV\n",
-							"df = spark.read.csv(\"abfss://adlstestingfilesystem@adlstestingasindu.dfs.core.windows.net/Target/customer/customer.csv\",\n",
-							"                    header=True, inferSchema=True)\n",
-							"\n",
-							"df.show(5)\n",
-							""
-						],
-						"outputs": []
-					}
-				]
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/Notebook 3')]",
-			"type": "Microsoft.Synapse/workspaces/notebooks",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"metadata": {},
-				"cells": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/Notebooktest')]",
-			"type": "Microsoft.Synapse/workspaces/notebooks",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"nbformat": 4,
-				"nbformat_minor": 2,
-				"bigDataPool": {
-					"referenceName": "sparkpoolmedium",
+					"referenceName": "[parameters('mynotebook_properties_bigDataPool_referenceName')]",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -338,7 +272,97 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "ff1f8620-333e-40c8-b2ad-beb10f87a70b"
+						"spark.autotune.trackingId": "d9f707e9-6737-4d27-8caa-e0cf1f1e207d"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							"hgchchhgv"
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/sparkpoolmedium')]",
+			"type": "Microsoft.Synapse/workspaces/bigDataPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"autoPause": {
+					"enabled": true,
+					"delayInMinutes": 15
+				},
+				"autoScale": {
+					"enabled": true,
+					"maxNodeCount": 3,
+					"minNodeCount": 3
+				},
+				"nodeCount": 10,
+				"nodeSize": "Small",
+				"nodeSizeFamily": "MemoryOptimized",
+				"sparkVersion": "3.4",
+				"isComputeIsolationEnabled": false,
+				"sessionLevelPackagesEnabled": false,
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "southeastasia"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 1')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 1_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "811c81aa-d242-455d-ab38-01d499e1e728"
 					}
 				},
 				"metadata": {
@@ -383,29 +407,134 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/sparkpoolmedium')]",
-			"type": "Microsoft.Synapse/workspaces/bigDataPools",
+			"name": "[concat(parameters('workspaceName'), '/Notebook 3')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"autoPause": {
-					"enabled": true,
-					"delayInMinutes": 15
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 3_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
 				},
-				"autoScale": {
-					"enabled": true,
-					"maxNodeCount": 3,
-					"minNodeCount": 3
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "d5fcd695-ed09-4d79-b454-5795e6acfcb8"
+					}
 				},
-				"nodeCount": 10,
-				"nodeSize": "Small",
-				"nodeSizeFamily": "MemoryOptimized",
-				"sparkVersion": "3.4",
-				"isComputeIsolationEnabled": false,
-				"sessionLevelPackagesEnabled": false,
-				"annotations": []
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
 			},
-			"dependsOn": [],
-			"location": "southeastasia"
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 4')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 4_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "d2f74e35-5d10-43f8-9ada-4332a67f18ed"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
 		}
 	]
 }

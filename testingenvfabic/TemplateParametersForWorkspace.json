@@ -8,8 +8,17 @@
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
-		"testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url": {
-			"value": "https://adlstestingasindu.dfs.core.windows.net"
+		"mynotebook_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 1_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 3_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 4_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
 		}
 	}
 }
