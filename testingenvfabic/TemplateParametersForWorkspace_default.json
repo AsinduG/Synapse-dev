@@ -5,6 +5,12 @@
 		"workspaceName": {
 			"value": "testingenvfabic"
 		},
+		"mynotebook_properties_bigDataPool_referenceName": {
+			"value": "newpool"
+		},
+		"Notebook 1_properties_bigDataPool_referenceName": {
+			"value": "newpool"
+		},
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
