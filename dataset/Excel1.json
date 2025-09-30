@@ -5,14 +5,41 @@
 			"referenceName": "AzureDataLakeStorage4",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"mainFolder": {
+				"type": "string"
+			},
+			"subfolder": {
+				"type": "string"
+			},
+			"filepath": {
+				"type": "string"
+			},
+			"sheetname": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "FreightRates",
+			"sheetName": {
+				"value": "@dataset().sheetname",
+				"type": "Expression"
+			},
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Supply chain logisitcs problem.xlsx",
-				"fileSystem": "source"
+				"fileName": {
+					"value": "@dataset().filepath",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().subfolder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().mainFolder",
+					"type": "Expression"
+				}
 			}
 		},
 		"schema": []
