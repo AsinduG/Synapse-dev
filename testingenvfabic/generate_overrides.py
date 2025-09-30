@@ -9,6 +9,7 @@ params = []
 for resource in template.get("resources", []):
     if resource.get("type") == "Microsoft.Synapse/workspaces/notebooks":
         notebook_name = resource["name"].split('/')[-1]  # Get notebook display name
+        notebook_name = notebook_name[:-3]
         param_name = f"{notebook_name}_properties_bigDataPool_referenceName"
         params.append(param_name)
 
