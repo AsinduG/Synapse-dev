@@ -35,7 +35,7 @@ jobs:
         with:
           TargetWorkspaceName: 'poductionenv'
           TemplateFile: './testingenvfabic/TemplateForWorkspace.json'
-          ParametersFile: './testingenvfabic/TemplateParametersForWorkspace_default.json'
+          ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
           resourceGroup: 'RGproduction'
           clientId: ${{ secrets.clientId }}
@@ -44,6 +44,6 @@ jobs:
           tenantId: ${{ secrets.tenantId }}
           DeleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'False'
-          OverrideArmParameters: ${{ steps.override.outputs.override_str }}
+          OverrideArmParameters: './testingenvfabic/Parameters.json'
 
      
