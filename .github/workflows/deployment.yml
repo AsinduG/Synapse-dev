@@ -31,6 +31,7 @@ jobs:
               "Notebook 1_properties_bigDataPool_referenceName": { "value": "newpool" },
               "Notebook 2_properties_bigDataPool_referenceName": { "value": "newpool" },
               "Notebook 3_properties_bigDataPool_referenceName": { "value": "newpool" },
-              "Notebook 16_properties_bigDataPool_referenceName": { "value": "newpool" }
+              "Notebook 16_properties_bigDataPool_referenceName": { "value": "newpool" },
+              "Notebook 18_properties_bigDataPool_referenceName": { "value": "newpool" }
             }
 
