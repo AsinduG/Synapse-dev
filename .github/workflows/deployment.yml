@@ -17,23 +17,21 @@ jobs:
           python-version: '3.x'
 
       - name: Generate Notebook Spark Pool Overrides
-        run: |
-          python ./testingenvfabic/generate_overrides.py
-        # This creates override.txt with all notebook parameters
-
+        run: python ./testingenvfabic/generate_overrides.py
 
       - name: Read override.json into variable
         id: override
         shell: pwsh
         run: |
           $override_str = Get-Content override.json -Raw
-          $override_str_escaped = $override_str -replace '"','\"'
-          echo "::set-output name=override_str::$override_str_escaped"
-
+          # Remove newlines just in case
+          $override_str = $override_str -replace "`r`n",""
+          echo "::set-output name=override_str::$override_str"
+      
       - name: Azure Synapse Deployment
         uses: azure/synapse-workspace-deployment@release-1.0
         with:
-          TargetWorkspaceName: 'poductionenv'
+          TargetWorkspaceName: 'productionenv'
           TemplateFile: './testingenvfabic/TemplateForWorkspace.json'
           ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
@@ -44,6 +42,6 @@ jobs:
           tenantId: ${{ secrets.tenantId }}
           DeleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'False'
-          OverrideArmParameters: './testingenvfabic/Parameters.json'
+          OverrideArmParameters: ${{ steps.override.outputs.override_str }}
 
      
