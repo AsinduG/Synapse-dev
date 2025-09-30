@@ -47,6 +47,10 @@
 		"Notebook 9_properties_bigDataPool_referenceName": {
 			"type": "string",
 			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 10_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
 		}
 	},
 	"variables": {
@@ -292,7 +296,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5ae205e4-38e0-47f0-a697-cdd513bf8dcd"
+						"spark.autotune.trackingId": "83344fa6-5d67-47c8-ac8a-d7e4edb87e21"
 					}
 				},
 				"metadata": {
@@ -382,7 +386,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "ecbf7372-8319-4558-991f-c4f67f83cadf"
+						"spark.autotune.trackingId": "29c67acd-7d14-425e-b70f-ab1f8fed12b2"
 					}
 				},
 				"metadata": {
@@ -447,7 +451,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "0be738e8-6391-412f-a4ad-fae60ee2a87c"
+						"spark.autotune.trackingId": "54b0dd5c-21d4-4f30-a832-17239fe21c37"
 					}
 				},
 				"metadata": {
@@ -512,7 +516,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "41989a1d-ad90-4f78-9405-20af95966689"
+						"spark.autotune.trackingId": "49e1598b-deaa-4f97-815d-dcc1e794d4cd"
 					}
 				},
 				"metadata": {
@@ -577,7 +581,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "6b743196-e712-4cb3-8030-18731122ddac"
+						"spark.autotune.trackingId": "4743d2d5-0b45-4dee-9f0d-fe762e4097af"
 					}
 				},
 				"metadata": {
@@ -642,7 +646,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "6d0df8fb-a66d-4abe-8e4a-0e5cc859c55c"
+						"spark.autotune.trackingId": "26af69c8-f249-452f-927a-4c1fed7c2458"
 					}
 				},
 				"metadata": {
@@ -707,7 +711,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "f409ea97-6bdd-4a1a-b211-10ec8a0002e1"
+						"spark.autotune.trackingId": "1afe0369-701e-4778-9286-57c59a5f143a"
 					}
 				},
 				"metadata": {
@@ -772,7 +776,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "86b6278e-e32d-48cb-b4a3-a0eb27d5742b"
+						"spark.autotune.trackingId": "c9b7cad3-72f6-4f64-ae17-2a08956e82ce"
 					}
 				},
 				"metadata": {
@@ -837,7 +841,72 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5883a547-4ca6-4604-be3c-3dbca5bf910c"
+						"spark.autotune.trackingId": "5093048b-7ab9-4493-8634-c28efb5b5517"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 10')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 10_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "9689488a-2fc1-4c5c-8da6-88a8c39fb5b2"
 					}
 				},
 				"metadata": {
