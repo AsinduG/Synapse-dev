@@ -1,41 +1,41 @@
 {
-  "Notebook 1_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 10_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 11_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 12_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 13_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 3_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 4_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 5_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 6_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 7_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 8_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"Notebook 9_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		},
-		"mynotebook_properties_bigDataPool_referenceName": {
-			"value": "newpool"
-		}
+  	"Notebook 1_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 10_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 11_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 12_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 13_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 3_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 4_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 5_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 6_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 7_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 8_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"Notebook 9_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	},
+	"mynotebook_properties_bigDataPool_referenceName": {
+		"value": "newpool"
+	}
 }
