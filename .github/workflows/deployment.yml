@@ -22,12 +22,13 @@ jobs:
         # This creates override.txt with all notebook parameters
 
 
-      - name: Read override.txt into variable
+      - name: Read override.json into variable
         id: override
         shell: pwsh
         run: |
-          $override_str = Get-Content override.txt -Raw
-          echo "::set-output name=override_str::$override_str"
+          $override_str = Get-Content override.json -Raw
+          $override_str_escaped = $override_str -replace '"','\"'
+          echo "::set-output name=override_str::$override_str_escaped"
 
       - name: Azure Synapse Deployment
         uses: azure/synapse-workspace-deployment@release-1.0
