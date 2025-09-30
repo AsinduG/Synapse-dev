@@ -21,6 +21,14 @@ jobs:
           python ./testingenvfabic/generate_overrides.py
         # This creates override.txt with all notebook parameters
 
+
+      - name: Read override.txt into variable
+        id: override
+        shell: pwsh
+        run: |
+          $override_str = Get-Content override.txt -Raw
+          echo "::set-output name=override_str::$override_str"
+
       - name: Azure Synapse Deployment
         uses: azure/synapse-workspace-deployment@release-1.0
         with:
@@ -37,8 +45,4 @@ jobs:
           managedIdentity: 'False'
           OverrideArmParameters: ${{ steps.override.outputs.override_str }}
 
-      - name: Read Overrides
-        id: override
-        run: |
-          override_str=$(cat override.txt)
-          echo "::set-output name=override_str::$override_str"
+     
