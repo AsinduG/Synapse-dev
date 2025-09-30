@@ -47,13 +47,24 @@
 				"inputs": [
 					{
 						"referenceName": "Excel1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"mainFolder": "source",
+							"subfolder": "sales",
+							"filepath": "Supply chain logisitcs problem.xlsx",
+							"sheetname": "FreightRates"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"mainFolder": "destination",
+							"subFolder": "sales",
+							"filepath": "sample.csv"
+						}
 					}
 				]
 			}
