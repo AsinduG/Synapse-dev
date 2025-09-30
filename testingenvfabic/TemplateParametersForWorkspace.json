@@ -17,14 +17,14 @@
 		"AzureDataLakeStorage3_accountKey": {
 			"value": ""
 		},
-		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
-			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
-		},
 		"AzureDataLakeStorage4_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage5_accountKey": {
 			"value": ""
+		},
+		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
 		"Notebook 1_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
