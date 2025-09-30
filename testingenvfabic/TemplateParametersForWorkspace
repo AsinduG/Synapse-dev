@@ -5,6 +5,9 @@
 		"workspaceName": {
 			"value": "testingenvfabic"
 		},
+        "sparkPoolName": {
+            "value": "newpool"
+        },
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
