@@ -9,7 +9,10 @@
 		"type": "Excel",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "sales.csv",
+				"folderPath": "source",
+				"fileSystem": "adlstestingfilesystem"
 			}
 		},
 		"schema": []
