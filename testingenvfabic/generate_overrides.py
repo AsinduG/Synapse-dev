@@ -13,7 +13,7 @@ for resource in template.get("resources", []):
         params.append(param_name)
 
 # Set the production spark pool name
-spark_pool_name = "sparkpoolprod"
+spark_pool_name = "newpool"
 
 # Generate OverrideArmParameters string
 override_str = "\n".join([f"{p}={spark_pool_name}" for p in params])
