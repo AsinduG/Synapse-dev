@@ -1,7 +1,17 @@
 {
-  "parameters": {
-    "notebookSparkPoolName": {
-      "value": "sparkpoolmedium"
-    }
+  "Notebook 1_properties_bigDataPool_referenceName": {
+    "value": "newpool"
+  },
+  "Notebook 10_properties_bigDataPool_referenceName": {
+    "value": "newpool"
+  },
+  "Notebook 11_properties_bigDataPool_referenceName": {
+    "value": "newpool"
+  },
+  "Notebook 12_properties_bigDataPool_referenceName": {
+    "value": "newpool"
+  },
+  "Notebook 13_properties_bigDataPool_referenceName": {
+    "value": "newpool"
   }
 }
