@@ -15,18 +15,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
-      - name: Generate Notebook Spark Pool Overrides
-        run: python ./testingenvfabic/generate_overrides.py
-
-      - name: Read override.json into variable
-        id: override
-        shell: pwsh
-        run: |
-          $override_str = Get-Content override.json -Raw
-          # Remove newlines just in case
-          $override_str = $override_str -replace "`r`n",""
-          echo "::set-output name=override_str::$override_str"
       
       - name: Azure Synapse Deployment
         uses: azure/synapse-workspace-deployment@release-1.0
@@ -42,6 +30,5 @@ jobs:
           tenantId: ${{ secrets.TENANTID }}
           DeleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'False'
-          OverrideArmParameters: ${{ steps.override.outputs.override_str }}
 
      
