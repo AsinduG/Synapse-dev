@@ -2,7 +2,7 @@
 	"name": "testsql",
 	"properties": {
 		"content": {
-			"query": "",
+			"query": "asdas",
 			"metadata": {
 				"language": "sql"
 			},
