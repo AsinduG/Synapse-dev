@@ -36,10 +36,10 @@ jobs:
           ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
           resourceGroup: 'RGproduction'
-          clientId: ${{ secrets.clientId }}
-          clientSecret: ${{ secrets.clientSecret }}
-          subscriptionId: ${{ secrets.subscriptionId }}
-          tenantId: ${{ secrets.tenantId }}
+          clientId: ${{ secrets.CLIENTID }}
+          clientSecret: ${{ secrets.CLIENTSECRET }}
+          subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
+          tenantId: ${{ secrets.TENANTID }}
           DeleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'False'
           OverrideArmParameters: ${{ steps.override.outputs.override_str }}
