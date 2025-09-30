@@ -55,6 +55,10 @@
 		"Notebook 11_properties_bigDataPool_referenceName": {
 			"type": "string",
 			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 12_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
 		}
 	},
 	"variables": {
@@ -300,7 +304,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "eecf2890-c0fd-4e25-9313-21bd0758c1fe"
+						"spark.autotune.trackingId": "81f715a2-6ddc-427f-86ed-acda1ddefd39"
 					}
 				},
 				"metadata": {
@@ -390,7 +394,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "be6f046e-78a1-42e7-bd86-6f15c8154681"
+						"spark.autotune.trackingId": "1d0bd280-dbf1-4960-8339-95097e25fbff"
 					}
 				},
 				"metadata": {
@@ -455,7 +459,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "b3d2413a-f0d8-4439-a5e2-ebc5797bd796"
+						"spark.autotune.trackingId": "96360bea-166a-48b2-aa4c-d6cfbaa0facd"
 					}
 				},
 				"metadata": {
@@ -520,7 +524,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "f21a24d3-590b-4a48-8c42-9891362d2a2f"
+						"spark.autotune.trackingId": "5124f59c-39c0-4de4-b01c-7ce57bcc12da"
 					}
 				},
 				"metadata": {
@@ -585,7 +589,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "25da7766-aa69-4668-a3b8-9b6e111e6595"
+						"spark.autotune.trackingId": "485b65e0-19e9-4702-a8ab-8a937e0cd050"
 					}
 				},
 				"metadata": {
@@ -650,7 +654,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "93cc63ce-0daf-4456-9056-61f1692991a6"
+						"spark.autotune.trackingId": "9615b0ac-0668-4397-ac45-df119ed052f9"
 					}
 				},
 				"metadata": {
@@ -715,7 +719,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "67a34c31-f032-4649-a085-c73d826c2205"
+						"spark.autotune.trackingId": "1ef47ee6-fa79-4de8-8fef-07fb598b5a3a"
 					}
 				},
 				"metadata": {
@@ -780,7 +784,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "8892e42a-d3ce-4b4d-9c1b-ae233fa2119a"
+						"spark.autotune.trackingId": "7d362a8a-90df-4bc6-af2f-a8ac82ca2795"
 					}
 				},
 				"metadata": {
@@ -845,7 +849,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "19f2aeac-e967-47dd-bf96-1f9496a1c314"
+						"spark.autotune.trackingId": "604d697e-2b39-4553-a4ce-81391b273fc4"
 					}
 				},
 				"metadata": {
@@ -910,7 +914,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5fd16ee0-a4d9-4e5e-a93c-e513a8304634"
+						"spark.autotune.trackingId": "abafbfd6-9534-4ae2-a6f7-71134b3d3bff"
 					}
 				},
 				"metadata": {
@@ -975,7 +979,72 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "aa10621f-97c9-4a08-a762-0eef9ac6b3ee"
+						"spark.autotune.trackingId": "47cc4e99-b91d-4720-a08b-b8f1d4a25d43"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 12')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 12_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "ea5d0588-818d-4353-b7e4-33eda267c262"
 					}
 				},
 				"metadata": {
