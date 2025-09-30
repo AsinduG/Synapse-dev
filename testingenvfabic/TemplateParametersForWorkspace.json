@@ -5,8 +5,26 @@
 		"workspaceName": {
 			"value": "testingenvfabic"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
 		},
 		"Notebook 1_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
@@ -21,6 +39,12 @@
 			"value": "sparkpoolmedium"
 		},
 		"Notebook 13_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 17_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 18_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
 		},
 		"Notebook 3_properties_bigDataPool_referenceName": {
@@ -45,12 +69,6 @@
 			"value": "sparkpoolmedium"
 		},
 		"mynotebook_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 17_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 18_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
 		}
 	}
