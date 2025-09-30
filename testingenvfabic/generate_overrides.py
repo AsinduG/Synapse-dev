@@ -9,10 +9,10 @@ params = {}
 for resource in template.get("resources", []):
     if resource.get("type") == "Microsoft.Synapse/workspaces/notebooks":
         notebook_name = resource["name"].split('/')[-1]  # Get notebook display name
-        notebook_name = notebook_name[:-3]
+        notebook_name = notebook_name[:-3]  # Remove extension
         param_name = f"{notebook_name}_properties_bigDataPool_referenceName"
-        params[param_name] = {"value": "newpool"}  # JSON format
+        params[param_name] = {"value": "newpool"}  # Replace with your prod pool name
 
-# Save JSON to override.txt
+# Save JSON to file
 with open("override.json", "w") as f:
-    json.dump(params, f, indent=2)
+    json.dump(params, f)
