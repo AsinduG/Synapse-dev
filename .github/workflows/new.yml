@@ -1,7 +1,0 @@
-{
-  - name: Check Synapse Workspace Exists
-    run: |
-      az login --service-principal -u ${{ secrets.CLIENTID }} -p ${{ secrets.CLIENTSECRET }} --tenant ${{ secrets.TENANTID }}
-      az synapse workspace show --name ProductionEnv --resource-group RGproduction
-    shell: pwsh
-}
