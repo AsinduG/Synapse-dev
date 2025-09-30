@@ -14,5 +14,5 @@ for resource in template.get("resources", []):
         params[param_name] = {"value": "newpool"}  # JSON format
 
 # Save JSON to override.txt
-with open("override.txt", "w") as f:
-    json.dump(params, f)
+with open("override.json", "w") as f:
+    json.dump(params, f, indent=2)
