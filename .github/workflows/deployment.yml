@@ -35,7 +35,7 @@ jobs:
         with:
           TargetWorkspaceName: 'poductionenv'
           TemplateFile: './testingenvfabic/TemplateForWorkspace.json'
-          ParametersFile: './testingenvfabic/TemplateParametersForWorkspace.json'
+          ParametersFile: './testingenvfabic/TemplateParametersForWorkspace_default.json'
           environment: 'Azure Public'
           resourceGroup: 'RGproduction'
           clientId: ${{ secrets.clientId }}
