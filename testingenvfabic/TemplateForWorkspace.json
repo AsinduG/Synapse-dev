@@ -63,6 +63,10 @@
 		"mynotebook_properties_bigDataPool_referenceName": {
 			"type": "string",
 			"defaultValue": "sparkpoolmedium"
+		},
+		"Notebook 17_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpoolmedium"
 		}
 	},
 	"variables": {
@@ -619,7 +623,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "1d414886-9ed7-4eef-bb91-0ba47aa32108"
+						"spark.autotune.trackingId": "f6431832-0268-4ec0-ab42-5127431539c1"
 					}
 				},
 				"metadata": {
@@ -637,6 +641,7 @@
 				"cells": [
 					{
 						"cell_type": "code",
+						"metadata": {},
 						"source": [
 							""
 						],
@@ -664,7 +669,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "a24d64a1-5817-45d9-a833-a4f485ac59a8"
+						"spark.autotune.trackingId": "05823d82-0e01-43d1-a0d1-6276f2fe41cc"
 					}
 				},
 				"metadata": {
@@ -1221,6 +1226,117 @@
 			},
 			"dependsOn": [],
 			"location": "southeastasia"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 16')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "6472f5f7-ff45-4fcb-b6a5-29df982b1009"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 17')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 17_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "a4e8a0e9-8248-4c14-897e-541abdcc6b5e"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/c3aa044a-1526-4176-9f13-f936b554963c/resourceGroups/RGtestingEnv/providers/Microsoft.Synapse/workspaces/testingenvfabic/bigDataPools/sparkpoolmedium",
+						"name": "sparkpoolmedium",
+						"type": "Spark",
+						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 10,
+						"cores": 4,
+						"memory": 28,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							""
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
 		}
 	]
 }

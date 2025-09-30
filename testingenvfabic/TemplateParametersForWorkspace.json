@@ -46,6 +46,9 @@
 		},
 		"mynotebook_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
+		},
+		"Notebook 17_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
 		}
 	}
 }
