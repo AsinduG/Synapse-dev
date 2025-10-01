@@ -82,22 +82,22 @@
 			"value": "sparkpoolmedium"
 		},
 		"Notebook 5_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"Notebook 6_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"Notebook 7_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"Notebook 8_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"Notebook 9_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"mynotebook_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+			"value": "newpool"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": { 
 			"value": "https://prodkeysynapse.vault.azure.net/" 
