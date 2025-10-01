@@ -8,18 +8,6 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
-		"AzureDataLakeStorage1_accountKey": {
-			"value": ""
-		},
-		"AzureDataLakeStorage2_accountKey": {
-			"value": ""
-		},
-		"AzureDataLakeStorage3_accountKey": {
-			"value": ""
-		},
-		"AzureDataLakeStorage5_accountKey": {
-			"value": ""
-		},
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
