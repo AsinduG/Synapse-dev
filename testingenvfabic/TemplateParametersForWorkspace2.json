@@ -101,6 +101,9 @@
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": { 
 			"value": "https://prodkeysynapse.vault.azure.net/" 
+		},
+		"accountul": {
+			"value": "https://adlsproductionasindu.dfs.core.windows.net/"
 		}
 	}
 }
