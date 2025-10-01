@@ -229,8 +229,12 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "AzureDataLakeStorage5",
-					"type": "LinkedServiceReference"
+					"referenceName": "AzureDataLakeStorage4",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"accountul": "https://adlstestingenv.dfs.core.windows.net/",
+						"secretkey": "key"
+					}
 				},
 				"parameters": {
 					"mainFolder": {
@@ -269,7 +273,7 @@
 				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('workspaceId'), '/linkedServices/AzureDataLakeStorage5')]"
+				"[concat(variables('workspaceId'), '/linkedServices/AzureDataLakeStorage4')]"
 			]
 		},
 		{
