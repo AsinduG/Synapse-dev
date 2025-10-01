@@ -2,8 +2,12 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage5",
-			"type": "LinkedServiceReference"
+			"referenceName": "AzureDataLakeStorage4",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"accountul": "https://adlstestingenv.dfs.core.windows.net/",
+				"secretkey": "key"
+			}
 		},
 		"parameters": {
 			"mainFolder": {
