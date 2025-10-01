@@ -16,6 +16,51 @@
 			"metadata": "Secure string for 'connectionString' of 'testingenvfabic-WorkspaceDefaultSqlServer'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "secureString",
+			"metadata": "Secure string for 'baseUrl' of 'AzureKeyVault1'"
+		},
+		"AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties": {
+			"type": "object",
+			"defaultValue": {
+				"location": "AutoResolve",
+				"dataFlowProperties": {
+					"computeType": "General",
+					"coreCount": 8,
+					"timeToLive": 0
+				}
+			}
+		},
+		"SQL script 1_properties_content_currentConnection_databaseName": {
+			"type": "string"
+		},
+		"SQL script 1_properties_content_currentConnection_poolName": {
+			"type": "string"
+		},
+		"SQL script 2_properties_content_currentConnection_databaseName": {
+			"type": "string"
+		},
+		"SQL script 2_properties_content_currentConnection_poolName": {
+			"type": "string"
+		},
+		"SQL script 3_properties_content_currentConnection_databaseName": {
+			"type": "string"
+		},
+		"SQL script 3_properties_content_currentConnection_poolName": {
+			"type": "string"
+		},
+		"newsql_properties_content_currentConnection_databaseName": {
+			"type": "string"
+		},
+		"newsql_properties_content_currentConnection_poolName": {
+			"type": "string"
+		},
+		"testsql_properties_content_currentConnection_databaseName": {
+			"type": "string"
+		},
+		"testsql_properties_content_currentConnection_poolName": {
+			"type": "string"
+		},
 		"Notebook 1_properties_bigDataPool_referenceName": {
 			"type": "string",
 			"defaultValue": "sparkpoolmedium"
@@ -325,10 +370,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"connectionString": {
-						"type": "SecureString",
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
-					}
+					"connectionString": "[parameters('AzureBlobStorage1_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -394,7 +436,7 @@
 				"annotations": [],
 				"type": "AzureKeyVault",
 				"typeProperties": {
-					"baseUrl": "@{linkedService().keyvaulturl}"
+					"baseUrl": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []
@@ -412,10 +454,7 @@
 				"annotations": [],
 				"type": "AzureSqlDW",
 				"typeProperties": {
-					"connectionString": {
-						"type": "SecureString",
-						"value": "[parameters('testingenvfabic-WorkspaceDefaultSqlServer_connectionString')]"
-					}
+					"connectionString": "[parameters('testingenvfabic-WorkspaceDefaultSqlServer_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -452,14 +491,7 @@
 			"properties": {
 				"type": "Managed",
 				"typeProperties": {
-					"computeProperties": {
-						"location": "AutoResolve",
-						"dataFlowProperties": {
-							"computeType": "General",
-							"coreCount": 8,
-							"timeToLive": 0
-						}
-					}
+					"computeProperties": "[parameters('AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties')]"
 				}
 			},
 			"dependsOn": []
@@ -485,8 +517,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
-						"poolName": "Built-in"
+						"databaseName": "[parameters('SQL script 1_properties_content_currentConnection_databaseName')]",
+						"poolName": "[parameters('SQL script 1_properties_content_currentConnection_poolName')]"
 					},
 					"resultLimit": 5000
 				},
@@ -505,8 +537,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
-						"poolName": "Built-in"
+						"databaseName": "[parameters('SQL script 2_properties_content_currentConnection_databaseName')]",
+						"poolName": "[parameters('SQL script 2_properties_content_currentConnection_poolName')]"
 					},
 					"resultLimit": 5000
 				},
@@ -525,8 +557,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
-						"poolName": "Built-in"
+						"databaseName": "[parameters('SQL script 3_properties_content_currentConnection_databaseName')]",
+						"poolName": "[parameters('SQL script 3_properties_content_currentConnection_poolName')]"
 					},
 					"resultLimit": 5000
 				},
@@ -545,8 +577,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
-						"poolName": "Built-in"
+						"databaseName": "[parameters('newsql_properties_content_currentConnection_databaseName')]",
+						"poolName": "[parameters('newsql_properties_content_currentConnection_poolName')]"
 					},
 					"resultLimit": 5000
 				},
@@ -565,8 +597,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "master",
-						"poolName": "Built-in"
+						"databaseName": "[parameters('testsql_properties_content_currentConnection_databaseName')]",
+						"poolName": "[parameters('testsql_properties_content_currentConnection_poolName')]"
 					},
 					"resultLimit": 5000
 				},
