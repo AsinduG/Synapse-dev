@@ -5,8 +5,14 @@
 		"workspaceName": {
 			"value": "testingenvfabic"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": ""
 		},
 		"AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties": {
 			"value": {
@@ -50,6 +56,51 @@
 		},
 		"Notebook 1_properties_bigDataPool_referenceName": {
 			"value": "sparkpoolmedium"
+		},
+		"Notebook 10_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 11_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 12_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 13_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 17_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 18_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 3_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 4_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 5_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 6_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 7_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 8_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"Notebook 9_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"mynotebook_properties_bigDataPool_referenceName": {
+			"value": "sparkpoolmedium"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": { 
+			"value": "https://prodkeysynapse.vault.azure.net/" 
 		}
 	}
 }
