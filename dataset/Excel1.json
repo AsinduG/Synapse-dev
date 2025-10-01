@@ -3,7 +3,11 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage4",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"accountul": "https://adlstestingenv.dfs.core.windows.net/",
+				"secretkey": "key"
+			}
 		},
 		"parameters": {
 			"mainFolder": {
