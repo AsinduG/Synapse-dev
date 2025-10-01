@@ -32,6 +32,7 @@ jobs:
               "Notebook 2_properties_bigDataPool_referenceName": { "value": "newpool" },
               "Notebook 3_properties_bigDataPool_referenceName": { "value": "newpool" },
               "Notebook 16_properties_bigDataPool_referenceName": { "value": "newpool" },
-              "Notebook 18_properties_bigDataPool_referenceName": { "value": "newpool" }
+              "Notebook 18_properties_bigDataPool_referenceName": { "value": "newpool" },
+              "AzureKeyVault1_properties_typeProperties_baseUrl": { "value": "https://prodkeysynapse.vault.azure.net/" },
             }
 
