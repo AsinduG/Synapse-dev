@@ -6,6 +6,17 @@
             }
         }
     },
+    "Microsoft.Synapse/workspaces/datasets": {
+			
+        "properties": {
+            "linkedServiceName": {
+                "parameters": {
+                    "accountul": "=",
+                    "secretkey": "="
+                }
+            }
+        }
+    },
     "Microsoft.Synapse/workspaces/sqlscripts": {
         "properties": {
             "content": {
