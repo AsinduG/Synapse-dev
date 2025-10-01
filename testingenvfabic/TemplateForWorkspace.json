@@ -385,10 +385,16 @@
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
+				"parameters": {
+					"keyvaulturl": {
+						"type": "string",
+						"defaultValue": "https://devenvkey.vault.azure.net/"
+					}
+				},
 				"annotations": [],
 				"type": "AzureKeyVault",
 				"typeProperties": {
-					"baseUrl": "https://devenvkey.vault.azure.net/"
+					"baseUrl": "@{linkedService().keyvaulturl}"
 				}
 			},
 			"dependsOn": []
