@@ -1,17 +1,30 @@
 {
 	"name": "AzureDataLakeStorage4",
 	"properties": {
+		"parameters": {
+			"accountul": {
+				"type": "string",
+				"defaultValue": "https://adlstestingenv.dfs.core.windows.net/"
+			},
+			"secretkey": {
+				"type": "string",
+				"defaultValue": "key"
+			}
+		},
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://adlstestingenv.dfs.core.windows.net/",
+			"url": "@{linkedService().accountul}",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "key"
+				"secretName": {
+					"value": "@linkedService().secretkey",
+					"type": "Expression"
+				}
 			}
 		},
 		"connectVia": {
