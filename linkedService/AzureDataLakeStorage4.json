@@ -1,36 +1,26 @@
 {
 	"name": "AzureDataLakeStorage4",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
 	"properties": {
-		"parameters": {
-			"accountul": {
-				"type": "string",
-				"defaultValue": "https://adlstestingenv.dfs.core.windows.net/"
-			},
-			"secretkey": {
-				"type": "string",
-				"defaultValue": "key"
-			}
-		},
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "@{linkedService().accountul}",
+			"url": "https://adlstestingenv.dfs.core.windows.net/",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "AzureKeyVault1",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"keyvaulturl": "https://devenvkey.vault.azure.net/"
+					}
 				},
-				"secretName": {
-					"value": "@linkedService().secretkey",
-					"type": "Expression"
-				}
+				"secretName": "key"
 			}
 		},
 		"connectVia": {
 			"referenceName": "AutoResolveIntegrationRuntime",
 			"type": "IntegrationRuntimeReference"
 		}
-	},
-	"type": "Microsoft.Synapse/workspaces/linkedservices"
+	}
 }

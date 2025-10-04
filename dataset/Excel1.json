@@ -3,11 +3,7 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage4",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"accountul": "https://adlstestingenv.dfs.core.windows.net/",
-				"secretkey": "key"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"parameters": {
 			"mainFolder": {
@@ -48,5 +44,6 @@
 			"firstRowAsHeader": true
 		},
 		"schema": []
-	}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
 }

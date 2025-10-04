@@ -13,20 +13,17 @@
 			"executorMemory": "28g",
 			"executorCores": 4,
 			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "fa87f243-d5af-4238-b1b0-4c61b050b1d0"
+				"spark.autotune.trackingId": "9a011e48-2c41-4e11-b2cc-f3889ecb9c2b"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
 			"enableDebugMode": false,
-			"kernelspec": {
-				"name": "synapse_pyspark",
-				"display_name": "python"
-			},
 			"language_info": {
 				"name": "python"
 			},
@@ -37,13 +34,14 @@
 				"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net"
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
 				},
 				"sparkVersion": "3.4",
 				"nodeCount": 10,
 				"cores": 4,
 				"memory": 28,
-				"automaticScaleJobs": false
+				"extraHeader": null
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -52,8 +50,7 @@
 				"cell_type": "code",
 				"source": [
 					"bbvchz"
-				],
-				"execution_count": null
+				]
 			}
 		]
 	}

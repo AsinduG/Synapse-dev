@@ -1,16 +1,11 @@
 {
 	"name": "AzureKeyVault1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
 	"properties": {
-		"parameters": {
-			"keyvaulturl": {
-				"type": "string",
-				"defaultValue": "https://devenvkey.vault.azure.net/"
-			}
-		},
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "@{linkedService().keyvaulturl}"
+			"baseUrl": "https://devenvkey.vault.azure.net/"
 		}
 	}
 }

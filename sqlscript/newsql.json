@@ -2,7 +2,7 @@
 	"name": "newsql",
 	"properties": {
 		"content": {
-			"query": "",
+			"query": "select kednljwend",
 			"metadata": {
 				"language": "sql"
 			},
