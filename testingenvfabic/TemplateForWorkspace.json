@@ -16,110 +16,17 @@
 			"metadata": "Secure string for 'connectionString' of 'testingenvfabic-WorkspaceDefaultSqlServer'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstestingenv.dfs.core.windows.net/"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "secureString",
-			"metadata": "Secure string for 'baseUrl' of 'AzureKeyVault1'"
-		},
-		"AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties": {
-			"type": "object",
-			"defaultValue": {
-				"location": "AutoResolve",
-				"dataFlowProperties": {
-					"computeType": "General",
-					"coreCount": 8,
-					"timeToLive": 0
-				}
-			}
-		},
-		"SQL script 1_properties_content_currentConnection_databaseName": {
-			"type": "string"
-		},
-		"SQL script 1_properties_content_currentConnection_poolName": {
-			"type": "string"
-		},
-		"SQL script 2_properties_content_currentConnection_databaseName": {
-			"type": "string"
-		},
-		"SQL script 2_properties_content_currentConnection_poolName": {
-			"type": "string"
-		},
-		"SQL script 3_properties_content_currentConnection_databaseName": {
-			"type": "string"
-		},
-		"SQL script 3_properties_content_currentConnection_poolName": {
-			"type": "string"
-		},
-		"newsql_properties_content_currentConnection_databaseName": {
-			"type": "string"
-		},
-		"newsql_properties_content_currentConnection_poolName": {
-			"type": "string"
-		},
-		"testsql_properties_content_currentConnection_databaseName": {
-			"type": "string"
-		},
-		"testsql_properties_content_currentConnection_poolName": {
-			"type": "string"
-		},
-		"Notebook 1_properties_bigDataPool_referenceName": {
 			"type": "string",
-			"defaultValue": "sparkpoolmedium"
+			"defaultValue": "https://devenvkey.vault.azure.net/"
 		},
-		"Notebook 10_properties_bigDataPool_referenceName": {
+		"testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 11_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 12_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 13_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 17_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 18_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 3_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 4_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 5_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 6_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 7_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 8_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"Notebook 9_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
-		},
-		"mynotebook_properties_bigDataPool_referenceName": {
-			"type": "string",
-			"defaultValue": "sparkpoolmedium"
+			"defaultValue": "https://adlstestingasindu.dfs.core.windows.net"
 		}
 	},
 	"variables": {
@@ -163,7 +70,7 @@
 					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
-				"lastPublishTime": "2025-09-16T19:49:18Z"
+				"lastPublishTime": "2025-09-30T01:34:24Z"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/notebooks/Notebook 1')]"
@@ -245,7 +152,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-30T17:04:01Z"
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/datasets/Excel1')]",
@@ -259,11 +167,7 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "AzureDataLakeStorage4",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"accountul": "https://adlstestingenv.dfs.core.windows.net/",
-						"secretkey": "key"
-					}
+					"type": "LinkedServiceReference"
 				},
 				"parameters": {
 					"mainFolder": {
@@ -312,11 +216,7 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "AzureDataLakeStorage4",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"accountul": "https://adlstestingenv.dfs.core.windows.net/",
-						"secretkey": "key"
-					}
+					"type": "LinkedServiceReference"
 				},
 				"parameters": {
 					"mainFolder": {
@@ -386,30 +286,18 @@
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"parameters": {
-					"accountul": {
-						"type": "string",
-						"defaultValue": "https://adlstestingenv.dfs.core.windows.net/"
-					},
-					"secretkey": {
-						"type": "string",
-						"defaultValue": "key"
-					}
-				},
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "@{linkedService().accountul}",
+					"url": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]",
 					"accountKey": {
 						"type": "AzureKeyVaultSecret",
 						"store": {
 							"referenceName": "AzureKeyVault1",
-							"type": "LinkedServiceReference"
+							"type": "LinkedServiceReference",
+							"parameters": {}
 						},
-						"secretName": {
-							"value": "@linkedService().secretkey",
-							"type": "Expression"
-						}
+						"secretName": "key"
 					}
 				},
 				"connectVia": {
@@ -427,12 +315,6 @@
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"parameters": {
-					"keyvaulturl": {
-						"type": "string",
-						"defaultValue": "https://devenvkey.vault.azure.net/"
-					}
-				},
 				"annotations": [],
 				"type": "AzureKeyVault",
 				"typeProperties": {
@@ -473,7 +355,7 @@
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "https://adlstestingasindu.dfs.core.windows.net"
+					"url": "[parameters('testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url')]"
 				},
 				"connectVia": {
 					"referenceName": "AutoResolveIntegrationRuntime",
@@ -491,7 +373,14 @@
 			"properties": {
 				"type": "Managed",
 				"typeProperties": {
-					"computeProperties": "[parameters('AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties')]"
+					"computeProperties": {
+						"location": "AutoResolve",
+						"dataFlowProperties": {
+							"computeType": "General",
+							"coreCount": 8,
+							"timeToLive": 0
+						}
+					}
 				}
 			},
 			"dependsOn": []
@@ -517,8 +406,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "[parameters('SQL script 1_properties_content_currentConnection_databaseName')]",
-						"poolName": "[parameters('SQL script 1_properties_content_currentConnection_poolName')]"
+						"databaseName": "master",
+						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
 				},
@@ -537,8 +426,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "[parameters('SQL script 2_properties_content_currentConnection_databaseName')]",
-						"poolName": "[parameters('SQL script 2_properties_content_currentConnection_poolName')]"
+						"databaseName": "master",
+						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
 				},
@@ -557,8 +446,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "[parameters('SQL script 3_properties_content_currentConnection_databaseName')]",
-						"poolName": "[parameters('SQL script 3_properties_content_currentConnection_poolName')]"
+						"databaseName": "master",
+						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
 				},
@@ -572,13 +461,13 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "",
+					"query": "select kednljwend",
 					"metadata": {
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "[parameters('newsql_properties_content_currentConnection_databaseName')]",
-						"poolName": "[parameters('newsql_properties_content_currentConnection_poolName')]"
+						"databaseName": "master",
+						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
 				},
@@ -597,8 +486,8 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "[parameters('testsql_properties_content_currentConnection_databaseName')]",
-						"poolName": "[parameters('testsql_properties_content_currentConnection_poolName')]"
+						"databaseName": "master",
+						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
 				},
@@ -614,7 +503,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 1_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -623,6 +512,7 @@
 					"executorMemory": "28g",
 					"executorCores": 4,
 					"numExecutors": 2,
+					"runAsWorkspaceSystemIdentity": false,
 					"conf": {
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
@@ -633,10 +523,6 @@
 				"metadata": {
 					"saveOutput": true,
 					"enableDebugMode": false,
-					"kernelspec": {
-						"name": "synapse_pyspark",
-						"display_name": "python"
-					},
 					"language_info": {
 						"name": "python"
 					},
@@ -647,25 +533,24 @@
 						"endpoint": "https://testingenvfabic.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpoolmedium",
 						"auth": {
 							"type": "AAD",
-							"authResource": "https://dev.azuresynapse.net"
+							"authResource": "https://dev.azuresynapse.net",
+							"authHeader": null
 						},
 						"sparkVersion": "3.4",
 						"nodeCount": 10,
 						"cores": 4,
 						"memory": 28,
-						"automaticScaleJobs": false
+						"extraHeader": null
 					},
 					"sessionKeepAliveTimeout": 30
 				},
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
 						"source": [
 							"bbvchz"
 						],
-						"outputs": [],
-						"execution_count": null
+						"outputs": []
 					}
 				]
 			},
@@ -679,7 +564,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 10_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -742,7 +627,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 11_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -805,7 +690,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 12_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -868,7 +753,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 13_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1066,7 +951,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 17_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1129,7 +1014,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 18_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1192,7 +1077,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 3_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1255,7 +1140,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 4_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1318,7 +1203,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 5_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1381,7 +1266,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 6_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1444,7 +1329,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 7_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1507,7 +1392,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 8_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1570,7 +1455,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('Notebook 9_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
@@ -1633,7 +1518,7 @@
 				"nbformat": 4,
 				"nbformat_minor": 2,
 				"bigDataPool": {
-					"referenceName": "[parameters('mynotebook_properties_bigDataPool_referenceName')]",
+					"referenceName": "sparkpoolmedium",
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {

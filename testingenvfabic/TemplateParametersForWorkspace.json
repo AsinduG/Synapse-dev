@@ -11,93 +11,14 @@
 		"testingenvfabic-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:testingenvfabic.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://adlstestingenv.dfs.core.windows.net/"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"value": ""
+			"value": "https://devenvkey.vault.azure.net/"
 		},
-		"AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties": {
-			"value": {
-				"location": "AutoResolve",
-				"dataFlowProperties": {
-					"computeType": "General",
-					"coreCount": 8,
-					"timeToLive": 0
-				}
-			}
-		},
-		"SQL script 1_properties_content_currentConnection_databaseName": {
-			"value": ""
-		},
-		"SQL script 1_properties_content_currentConnection_poolName": {
-			"value": ""
-		},
-		"SQL script 2_properties_content_currentConnection_databaseName": {
-			"value": ""
-		},
-		"SQL script 2_properties_content_currentConnection_poolName": {
-			"value": ""
-		},
-		"SQL script 3_properties_content_currentConnection_databaseName": {
-			"value": ""
-		},
-		"SQL script 3_properties_content_currentConnection_poolName": {
-			"value": ""
-		},
-		"newsql_properties_content_currentConnection_databaseName": {
-			"value": ""
-		},
-		"newsql_properties_content_currentConnection_poolName": {
-			"value": ""
-		},
-		"testsql_properties_content_currentConnection_databaseName": {
-			"value": ""
-		},
-		"testsql_properties_content_currentConnection_poolName": {
-			"value": ""
-		},
-		"Notebook 1_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 10_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 11_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 12_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 13_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 17_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 18_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 3_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 4_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 5_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 6_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 7_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 8_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"Notebook 9_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
-		},
-		"mynotebook_properties_bigDataPool_referenceName": {
-			"value": "sparkpoolmedium"
+		"testingenvfabic-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://adlstestingasindu.dfs.core.windows.net"
 		}
 	}
 }
